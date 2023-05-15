@@ -35,20 +35,21 @@ public class ecommerce extends JFrame implements ActionListener
 
 
 
-        //button for add product
-        addproduct= new JButton("ADD PRODUCT");
+        //button for history
+        checkseller= new JButton("USER HISTORY");
         Font font3 = new Font ("Dialog", Font.BOLD, 20);
-        addproduct.setFont(font3);
-        addproduct.setBounds(300,50,200,200);
-        addproduct.addActionListener(this);
+        checkseller.setFont(font3);
+        checkseller.setBounds(300,50,200,200);
+        checkseller.addActionListener(this);
 
         
 
         //button for add product
-        checkseller= new JButton("CHECK SELLER");
+        addproduct= new JButton("ADD PRODUCT");
         Font font4 = new Font ("Dialog", Font.BOLD, 20);
-        checkseller.setFont(font4);
-        checkseller.setBounds(520,50,200,200);
+        addproduct.setFont(font4);
+        addproduct.setBounds(520,50,200,200);
+        addproduct.addActionListener(this);
         
 
 
@@ -81,10 +82,16 @@ public class ecommerce extends JFrame implements ActionListener
     } 
 
     public void actionPerformed(ActionEvent a){
-        if (a.getSource()==addproduct)
+        if (a.getSource()==checkseller)
         {
             setVisible(false);
-            new Product();
+            new History();
+        }
+
+        if(a.getSource()==addproduct)
+        {
+            setVisible(false);
+            new product();
         }
     }
 

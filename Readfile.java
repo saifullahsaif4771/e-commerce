@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Readfile {
     
     public String filereader() throws IOException {
-        StringBuilder stringBuilder = new StringBuilder();
+        
         BufferedReader reader = new BufferedReader(new FileReader("LogIn.txt"));
         String line = null; 
         String line1 = ""; 
