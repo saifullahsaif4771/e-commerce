@@ -5,7 +5,7 @@ import java.awt.Font;
 
 
 
-public class Product extends JFrame implements ActionListener
+public class product extends JFrame implements ActionListener
 {
 	private JLabel products;
 	private JTextArea showp;
@@ -13,12 +13,12 @@ public class Product extends JFrame implements ActionListener
 	
 
 	
-	public Product()
+	public product()
 	{
 		//title
-		super("Adding products");
+		super("History");
 		//label
-		products=new JLabel("products available:-");
+		products=new JLabel("log in his:-");
         Font font1 = new Font ("Dialog", Font.BOLD,20);
         products.setFont(font1);
 		products.setBounds(20,30,200,50);
@@ -40,7 +40,7 @@ public class Product extends JFrame implements ActionListener
 		}
 
         //button for add product
-        addproduct1=new JButton ("Add product");
+        addproduct1=new JButton ("add product");
         addproduct1.setBounds(20,600,200, 30);
         addproduct1.addActionListener(this);
 
@@ -67,16 +67,14 @@ public class Product extends JFrame implements ActionListener
         if (x.getSource()== addproduct1) {
 			
 			
-			String Username = textfield1.getText();
-			String password1 = new String(passField1.getPassword());
-			String password2 = new String(passField2.getPassword());
-			String email = textfield2.getText();
-            
+			
         }
     }
 	
 	public static void main(String[] args)
 	{
-		new Product();
+		new product();
 	}
 }
+    
+
